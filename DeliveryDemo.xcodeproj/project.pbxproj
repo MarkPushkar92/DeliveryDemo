@@ -10,9 +10,17 @@
 		631F48762A4BFBB500807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48752A4BFBB500807E30 /* AppDelegate.swift */; };
 		631F48782A4BFBB500807E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48772A4BFBB500807E30 /* SceneDelegate.swift */; };
 		631F487A2A4BFBB500807E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48792A4BFBB500807E30 /* ViewController.swift */; };
-		631F487D2A4BFBB500807E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631F487B2A4BFBB500807E30 /* Main.storyboard */; };
 		631F487F2A4BFBB700807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631F487E2A4BFBB700807E30 /* Assets.xcassets */; };
 		631F48822A4BFBB700807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631F48802A4BFBB700807E30 /* LaunchScreen.storyboard */; };
+		631F488A2A4BFC5E00807E30 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48892A4BFC5E00807E30 /* Coordinator.swift */; };
+		631F488C2A4BFC7800807E30 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F488B2A4BFC7800807E30 /* MainCoordinator.swift */; };
+		631F488E2A4BFCBC00807E30 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F488D2A4BFCBC00807E30 /* TabBarViewController.swift */; };
+		631F48902A4BFCE200807E30 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F488F2A4BFCE200807E30 /* Factory.swift */; };
+		631F48922A4BFD0200807E30 /* FirstScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48912A4BFD0200807E30 /* FirstScreenCoordinator.swift */; };
+		631F48962A4BFD8700807E30 /* FirtsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48952A4BFD8700807E30 /* FirtsScreenViewModel.swift */; };
+		631F48992A4BFE7E00807E30 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48982A4BFE7E00807E30 /* NetworkDataFetcher.swift */; };
+		631F489B2A4BFE9100807E30 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F489A2A4BFE9100807E30 /* NetworkService.swift */; };
+		631F489D2A4BFEAA00807E30 /* NetworkFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F489C2A4BFEAA00807E30 /* NetworkFetcherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,18 @@
 		631F48752A4BFBB500807E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		631F48772A4BFBB500807E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		631F48792A4BFBB500807E30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		631F487C2A4BFBB500807E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		631F487E2A4BFBB700807E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		631F48812A4BFBB700807E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		631F48832A4BFBB700807E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631F48892A4BFC5E00807E30 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		631F488B2A4BFC7800807E30 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		631F488D2A4BFCBC00807E30 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		631F488F2A4BFCE200807E30 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		631F48912A4BFD0200807E30 /* FirstScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenCoordinator.swift; sourceTree = "<group>"; };
+		631F48952A4BFD8700807E30 /* FirtsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirtsScreenViewModel.swift; sourceTree = "<group>"; };
+		631F48982A4BFE7E00807E30 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		631F489A2A4BFE9100807E30 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		631F489C2A4BFEAA00807E30 /* NetworkFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +74,53 @@
 			children = (
 				631F48752A4BFBB500807E30 /* AppDelegate.swift */,
 				631F48772A4BFBB500807E30 /* SceneDelegate.swift */,
-				631F48792A4BFBB500807E30 /* ViewController.swift */,
-				631F487B2A4BFBB500807E30 /* Main.storyboard */,
+				631F489E2A4BFEFF00807E30 /* Networking */,
+				631F48932A4BFD1E00807E30 /* Coordinators */,
+				631F48972A4BFE5200807E30 /* FirstScreenModule */,
 				631F487E2A4BFBB700807E30 /* Assets.xcassets */,
 				631F48802A4BFBB700807E30 /* LaunchScreen.storyboard */,
 				631F48832A4BFBB700807E30 /* Info.plist */,
 			);
 			path = DeliveryDemo;
+			sourceTree = "<group>";
+		};
+		631F48932A4BFD1E00807E30 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				631F48942A4BFD3500807E30 /* Common */,
+				631F488B2A4BFC7800807E30 /* MainCoordinator.swift */,
+				631F48912A4BFD0200807E30 /* FirstScreenCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		631F48942A4BFD3500807E30 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				631F48892A4BFC5E00807E30 /* Coordinator.swift */,
+				631F488D2A4BFCBC00807E30 /* TabBarViewController.swift */,
+				631F488F2A4BFCE200807E30 /* Factory.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		631F48972A4BFE5200807E30 /* FirstScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				631F48792A4BFBB500807E30 /* ViewController.swift */,
+				631F48952A4BFD8700807E30 /* FirtsScreenViewModel.swift */,
+			);
+			path = FirstScreenModule;
+			sourceTree = "<group>";
+		};
+		631F489E2A4BFEFF00807E30 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				631F48982A4BFE7E00807E30 /* NetworkDataFetcher.swift */,
+				631F489A2A4BFE9100807E30 /* NetworkService.swift */,
+				631F489C2A4BFEAA00807E30 /* NetworkFetcherService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +183,6 @@
 			files = (
 				631F48822A4BFBB700807E30 /* LaunchScreen.storyboard in Resources */,
 				631F487F2A4BFBB700807E30 /* Assets.xcassets in Resources */,
-				631F487D2A4BFBB500807E30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +193,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631F489B2A4BFE9100807E30 /* NetworkService.swift in Sources */,
+				631F488A2A4BFC5E00807E30 /* Coordinator.swift in Sources */,
+				631F489D2A4BFEAA00807E30 /* NetworkFetcherService.swift in Sources */,
 				631F487A2A4BFBB500807E30 /* ViewController.swift in Sources */,
 				631F48762A4BFBB500807E30 /* AppDelegate.swift in Sources */,
+				631F48922A4BFD0200807E30 /* FirstScreenCoordinator.swift in Sources */,
+				631F48992A4BFE7E00807E30 /* NetworkDataFetcher.swift in Sources */,
+				631F488C2A4BFC7800807E30 /* MainCoordinator.swift in Sources */,
+				631F488E2A4BFCBC00807E30 /* TabBarViewController.swift in Sources */,
+				631F48962A4BFD8700807E30 /* FirtsScreenViewModel.swift in Sources */,
 				631F48782A4BFBB500807E30 /* SceneDelegate.swift in Sources */,
+				631F48902A4BFCE200807E30 /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		631F487B2A4BFBB500807E30 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				631F487C2A4BFBB500807E30 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		631F48802A4BFBB700807E30 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +348,6 @@
 				INFOPLIST_FILE = DeliveryDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +375,6 @@
 				INFOPLIST_FILE = DeliveryDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
