@@ -14,19 +14,19 @@ class ViewController: UIViewController {
     
     private let viewModel: FirtsScreenViewModel
     
-    
+    private let firstScreenView = FirstScreenView()
     
     //MARK: Init and LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
+        viewModel.getCategories {
+            self.firstScreenView.categories = self.viewModel.categories
+        }
       
     }
         
-  
-
     init(viewModel: FirtsScreenViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -41,12 +41,15 @@ class ViewController: UIViewController {
 private extension ViewController {
     
      func setupViews() {
-
-         view.backgroundColor = .red
-         
-//         let constrains = [
-//          
-//         ]
-//         NSLayoutConstraint.activate(constrains)
+         setupNavigation()
+         view.addSubview(firstScreenView)
+         view.backgroundColor = .white
+         let constrains = [
+            firstScreenView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            firstScreenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            firstScreenView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            firstScreenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+         ]
+         NSLayoutConstraint.activate(constrains)
     }
 }

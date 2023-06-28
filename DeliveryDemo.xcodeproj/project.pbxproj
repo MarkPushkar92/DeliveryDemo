@@ -21,6 +21,12 @@
 		631F48992A4BFE7E00807E30 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48982A4BFE7E00807E30 /* NetworkDataFetcher.swift */; };
 		631F489B2A4BFE9100807E30 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F489A2A4BFE9100807E30 /* NetworkService.swift */; };
 		631F489D2A4BFEAA00807E30 /* NetworkFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F489C2A4BFEAA00807E30 /* NetworkFetcherService.swift */; };
+		631F48A02A4C00A700807E30 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F489F2A4C00A700807E30 /* CommonExtensions.swift */; };
+		631F48A32A4C05F600807E30 /* NetworkingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48A22A4C05F600807E30 /* NetworkingModels.swift */; };
+		631F48A52A4C083E00807E30 /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48A42A4C083E00807E30 /* FirstScreenView.swift */; };
+		631F48A72A4C094100807E30 /* SelectCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48A62A4C094100807E30 /* SelectCategoryCell.swift */; };
+		631F48AA2A4C0BB300807E30 /* CategotyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48A92A4C0BB300807E30 /* CategotyModel.swift */; };
+		631F48AC2A4C123200807E30 /* FirstScreenExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48AB2A4C123200807E30 /* FirstScreenExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		631F48982A4BFE7E00807E30 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		631F489A2A4BFE9100807E30 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		631F489C2A4BFEAA00807E30 /* NetworkFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcherService.swift; sourceTree = "<group>"; };
+		631F489F2A4C00A700807E30 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		631F48A22A4C05F600807E30 /* NetworkingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingModels.swift; sourceTree = "<group>"; };
+		631F48A42A4C083E00807E30 /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		631F48A62A4C094100807E30 /* SelectCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryCell.swift; sourceTree = "<group>"; };
+		631F48A92A4C0BB300807E30 /* CategotyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategotyModel.swift; sourceTree = "<group>"; };
+		631F48AB2A4C123200807E30 /* FirstScreenExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,7 @@
 				631F487E2A4BFBB700807E30 /* Assets.xcassets */,
 				631F48802A4BFBB700807E30 /* LaunchScreen.storyboard */,
 				631F48832A4BFBB700807E30 /* Info.plist */,
+				631F48A12A4C00B800807E30 /* Common */,
 			);
 			path = DeliveryDemo;
 			sourceTree = "<group>";
@@ -108,7 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				631F48792A4BFBB500807E30 /* ViewController.swift */,
+				631F48AB2A4C123200807E30 /* FirstScreenExt.swift */,
+				631F48A82A4C094900807E30 /* Views */,
 				631F48952A4BFD8700807E30 /* FirtsScreenViewModel.swift */,
+				631F48A92A4C0BB300807E30 /* CategotyModel.swift */,
 			);
 			path = FirstScreenModule;
 			sourceTree = "<group>";
@@ -119,8 +135,26 @@
 				631F48982A4BFE7E00807E30 /* NetworkDataFetcher.swift */,
 				631F489A2A4BFE9100807E30 /* NetworkService.swift */,
 				631F489C2A4BFEAA00807E30 /* NetworkFetcherService.swift */,
+				631F48A22A4C05F600807E30 /* NetworkingModels.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		631F48A12A4C00B800807E30 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				631F489F2A4C00A700807E30 /* CommonExtensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		631F48A82A4C094900807E30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				631F48A42A4C083E00807E30 /* FirstScreenView.swift */,
+				631F48A62A4C094100807E30 /* SelectCategoryCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,16 +228,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				631F489B2A4BFE9100807E30 /* NetworkService.swift in Sources */,
+				631F48A72A4C094100807E30 /* SelectCategoryCell.swift in Sources */,
+				631F48AC2A4C123200807E30 /* FirstScreenExt.swift in Sources */,
 				631F488A2A4BFC5E00807E30 /* Coordinator.swift in Sources */,
 				631F489D2A4BFEAA00807E30 /* NetworkFetcherService.swift in Sources */,
+				631F48A52A4C083E00807E30 /* FirstScreenView.swift in Sources */,
 				631F487A2A4BFBB500807E30 /* ViewController.swift in Sources */,
 				631F48762A4BFBB500807E30 /* AppDelegate.swift in Sources */,
+				631F48AA2A4C0BB300807E30 /* CategotyModel.swift in Sources */,
+				631F48A32A4C05F600807E30 /* NetworkingModels.swift in Sources */,
 				631F48922A4BFD0200807E30 /* FirstScreenCoordinator.swift in Sources */,
 				631F48992A4BFE7E00807E30 /* NetworkDataFetcher.swift in Sources */,
 				631F488C2A4BFC7800807E30 /* MainCoordinator.swift in Sources */,
 				631F488E2A4BFCBC00807E30 /* TabBarViewController.swift in Sources */,
 				631F48962A4BFD8700807E30 /* FirtsScreenViewModel.swift in Sources */,
 				631F48782A4BFBB500807E30 /* SceneDelegate.swift in Sources */,
+				631F48A02A4C00A700807E30 /* CommonExtensions.swift in Sources */,
 				631F48902A4BFCE200807E30 /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

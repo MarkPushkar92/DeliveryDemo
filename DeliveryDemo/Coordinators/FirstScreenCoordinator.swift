@@ -24,8 +24,6 @@ class FirstScreenCoordinator: Coordinator {
     
     func start() {
         navigation.pushViewController(firstScreen.controller, animated: true)
-        
-       
     }
     
    
