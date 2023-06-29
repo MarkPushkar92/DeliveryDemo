@@ -8,19 +8,11 @@
 
 import UIKit
 
-extension ViewController {
+extension UIViewController {
     
     func setupNavigation() {
         
-        let imageView: UIImageView = {
-            let imageView = UIImageView()
-            imageView.contentMode = .scaleAspectFill
-            imageView.image = UIImage(named: "userImage")
-            imageView.layer.cornerRadius = 44/2
-            imageView.layer.masksToBounds = true
-            imageView.toAutoLayout()
-            return imageView
-        }()
+        let imageView = CommonNavigationItems.imageView
         
         let locationImg: UIImageView = {
             let imageView = UIImageView()
@@ -65,9 +57,6 @@ extension ViewController {
             imageView.heightAnchor.constraint(equalToConstant: 44),
             
             leftView.widthAnchor.constraint(equalToConstant: 220),
-            
-            
-
             
             locationImg.widthAnchor.constraint(equalToConstant: 24),
             locationImg.heightAnchor.constraint(equalToConstant: 24),

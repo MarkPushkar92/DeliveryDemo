@@ -1,19 +1,16 @@
 //
-//  FirstScreenView.swift
+//  MenuCollectionView.swift
 //  DeliveryDemo
 //
-//  Created by Марк Пушкарь on 28.06.2023.
+//  Created by Марк Пушкарь on 29.06.2023.
 //
 
 
 import UIKit
 
-
-class FirstScreenView: UIView {
+class MenuCollectionView: UIView {
     
-    var onTap: ((String) -> ())?
-    
-    var categories: [CategoryModel] = [] {
+    var menu = [DishModel]() {
         didSet {
             collectionView.reloadData()
         }
@@ -24,11 +21,11 @@ class FirstScreenView: UIView {
     private let layout = UICollectionViewFlowLayout()
 
     private func setupViews() {
-        self.toAutoLayout()
         self.addSubview(collectionView)
+        self.toAutoLayout()
         self.backgroundColor = .white
         let constraints = [
-                        
+
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -42,7 +39,7 @@ class FirstScreenView: UIView {
         layout.scrollDirection = .vertical
         collectionView.alwaysBounceVertical = true
         collectionView.toAutoLayout()
-        collectionView.register(SelectCategoryCell.self, forCellWithReuseIdentifier: String(describing: SelectCategoryCell.self))
+        collectionView.register(MenuCell.self, forCellWithReuseIdentifier: String(describing: MenuCell.self))
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.allowsMultipleSelection = false
@@ -62,36 +59,34 @@ class FirstScreenView: UIView {
 
 
 
+
 //MARK: EXTENSIONS
 
-extension FirstScreenView: UICollectionViewDataSource {
+extension MenuCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return menu.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SelectCategoryCell.self), for: indexPath) as! SelectCategoryCell
-        cell.model = categories[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MenuCell.self), for: indexPath) as! MenuCell
+        cell.model = menu[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let onTap = onTap else { return }
-        let selectedCell: SelectCategoryCell = collectionView.cellForItem(at: indexPath)! as! SelectCategoryCell
-        guard let title = selectedCell.model?.name else { return }
-        onTap(title)
+       
     }
     
   
 }
 
-extension FirstScreenView: UICollectionViewDelegateFlowLayout {
+extension MenuCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width: CGFloat = 343
-        let height: CGFloat = 148
+        let width: CGFloat = 109
+        let height: CGFloat = 160
         return CGSize(width: width, height: height)
     }
     

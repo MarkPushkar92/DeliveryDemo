@@ -24,6 +24,10 @@ class FirstScreenCoordinator: Coordinator {
     
     func start() {
         navigation.pushViewController(firstScreen.controller, animated: true)
+        firstScreen.viewModel.onShowNext = { [self]  title in
+            let vc = CategoryDetaisController(viewModel: firstScreen.viewModel, titleName: title)
+            navigation.pushViewController(vc, animated: true)
+        }
     }
     
    

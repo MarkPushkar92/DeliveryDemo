@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     
     weak var coordinator: FirstScreenCoordinator?
@@ -23,8 +22,8 @@ class ViewController: UIViewController {
         setupViews()
         viewModel.getCategories {
             self.firstScreenView.categories = self.viewModel.categories
+            self.firstScreenView.onTap = self.viewModel.onTapShowNextModule
         }
-      
     }
         
     init(viewModel: FirtsScreenViewModel) {

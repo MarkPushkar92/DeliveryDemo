@@ -1,16 +1,15 @@
 //
-//  SelectCategoryCell.swift
+//  MenuCell.swift
 //  DeliveryDemo
 //
-//  Created by Марк Пушкарь on 28.06.2023.
+//  Created by Марк Пушкарь on 29.06.2023.
 //
-
 
 import UIKit
 
-class SelectCategoryCell: UICollectionViewCell {
+class MenuCell: UICollectionViewCell {
     
-    var model: CategoryModel? {
+    var model: DishModel? {
         willSet {
             if let text = newValue?.name {
                 label.text = text
@@ -25,14 +24,17 @@ class SelectCategoryCell: UICollectionViewCell {
     private let image: UIImageView = {
         let image = UIImageView()
         image.toAutoLayout()
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
+        image.layer.cornerRadius = 10
+        image.layer.masksToBounds = true
+        image.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.96, alpha: 1)
         return image
     }()
     
     private let label: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = .systemFont(ofSize: 20, weight: .medium)
+        label.font = .systemFont(ofSize: 14, weight: .medium)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .left
@@ -52,21 +54,19 @@ class SelectCategoryCell: UICollectionViewCell {
     
     private func setupViews() {
        
-        contentView.addSubviews(image)
-        image.addSubviews(label)
-        self.layer.cornerRadius = 10
+        contentView.addSubviews(image, label)
 
         let constrains = [
             
             image.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             image.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             image.topAnchor.constraint(equalTo: self.topAnchor),
-            image.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            image.heightAnchor.constraint(equalToConstant: 119),
            
-            label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            label.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
-            label.widthAnchor.constraint(equalToConstant: 190),
-            label.heightAnchor.constraint(equalToConstant: 50)
+            label.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            label.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 2),
+            label.widthAnchor.constraint(equalToConstant: 119),
+            label.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
         ]
         NSLayoutConstraint.activate(constrains)
