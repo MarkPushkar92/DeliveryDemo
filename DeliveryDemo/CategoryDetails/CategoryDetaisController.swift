@@ -24,10 +24,27 @@ class CategoryDetaisController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        print(titleName)
         viewModel.getCategoryDetails {
-            print(self.viewModel.categoryDetails.count)
             self.categoryDetailsView.menuView.menu = self.viewModel.categoryDetails
+            self.categoryDetailsView.onTap = { tag in
+                
+                let menu = self.viewModel.categoryDetails.filter { $0.tegs!.contains(where: {$0 == tag})}
+                self.categoryDetailsView.menuView.menu = menu
+                
+                // тут безопасно но некрасиво 
+                
+//                let menu = self.viewModel.categoryDetails.filter { dish in
+//                    guard let tegs = dish.tegs else  { return false }
+//                    if tegs.contains(where: { teg in
+//                        teg == tag
+//                    }) {
+//                        return true
+//                    } else {
+//                        return false
+//                    }
+//                }
+//                self.categoryDetailsView.menuView.menu = menu
+            }
         }
     }
         

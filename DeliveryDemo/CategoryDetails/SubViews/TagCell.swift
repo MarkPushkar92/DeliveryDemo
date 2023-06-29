@@ -9,6 +9,12 @@ import UIKit
 
 class TagCell: UICollectionViewCell {
     
+    var cellTag: Teg? {
+        willSet {
+            label.text = newValue?.rawValue
+        }
+    }
+    
     override var isSelected: Bool {
         didSet {
             if isSelected {
@@ -19,12 +25,6 @@ class TagCell: UICollectionViewCell {
                 label.textColor = .black
 
             }
-        }
-    }
-    
-    var tagLabelText: String? {
-        willSet {
-            label.text = newValue
         }
     }
     

@@ -9,6 +9,8 @@ import UIKit
 
 class CategoryDetailsView: UIView {
     
+    var onTap: ((Teg) -> Void)?
+    
     private lazy var tagsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     
     private let layout = UICollectionViewFlowLayout()
@@ -68,14 +70,16 @@ extension CategoryDetailsView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TagCell.self), for: indexPath) as! TagCell
-        cell.tagLabelText = Teg.allCases[indexPath.row].rawValue
+        cell.cellTag = Teg.allCases[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      
+        let cell = collectionView.cellForItem(at: indexPath) as? TagCell
+        guard let tag = cell?.cellTag else { return }
+        guard let onTap = onTap else { return }
+        onTap(tag)
     }
-    
   
 }
 
