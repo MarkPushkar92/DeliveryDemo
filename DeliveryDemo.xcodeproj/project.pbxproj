@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630150102A4DA15C00DC0D94 /* DishDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301500F2A4DA15C00DC0D94 /* DishDetailsVC.swift */; };
+		630150122A4DA16600DC0D94 /* DishDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630150112A4DA16600DC0D94 /* DishDetailsView.swift */; };
 		631F48762A4BFBB500807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48752A4BFBB500807E30 /* AppDelegate.swift */; };
 		631F48782A4BFBB500807E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48772A4BFBB500807E30 /* SceneDelegate.swift */; };
 		631F487A2A4BFBB500807E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F48792A4BFBB500807E30 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6301500F2A4DA15C00DC0D94 /* DishDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsVC.swift; sourceTree = "<group>"; };
+		630150112A4DA16600DC0D94 /* DishDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsView.swift; sourceTree = "<group>"; };
 		631F48722A4BFBB500807E30 /* DeliveryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		631F48752A4BFBB500807E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		631F48772A4BFBB500807E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6301500E2A4DA13200DC0D94 /* DishDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6301500F2A4DA15C00DC0D94 /* DishDetailsVC.swift */,
+				630150112A4DA16600DC0D94 /* DishDetailsView.swift */,
+			);
+			path = DishDetails;
+			sourceTree = "<group>";
+		};
 		631F48692A4BFBB500807E30 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 				631F48932A4BFD1E00807E30 /* Coordinators */,
 				631F48972A4BFE5200807E30 /* FirstScreenModule */,
 				636EE3672A4C366300A1B2F1 /* CategoryDetails */,
+				6301500E2A4DA13200DC0D94 /* DishDetails */,
 				631F487E2A4BFBB700807E30 /* Assets.xcassets */,
 				631F48802A4BFBB700807E30 /* LaunchScreen.storyboard */,
 				631F48832A4BFBB700807E30 /* Info.plist */,
@@ -283,12 +297,14 @@
 				631F48922A4BFD0200807E30 /* FirstScreenCoordinator.swift in Sources */,
 				631F48992A4BFE7E00807E30 /* NetworkDataFetcher.swift in Sources */,
 				636EE3692A4C369800A1B2F1 /* CategoryDetaisController.swift in Sources */,
+				630150122A4DA16600DC0D94 /* DishDetailsView.swift in Sources */,
 				631F488C2A4BFC7800807E30 /* MainCoordinator.swift in Sources */,
 				631F488E2A4BFCBC00807E30 /* TabBarViewController.swift in Sources */,
 				631F48962A4BFD8700807E30 /* FirtsScreenViewModel.swift in Sources */,
 				631F48782A4BFBB500807E30 /* SceneDelegate.swift in Sources */,
 				631F48A02A4C00A700807E30 /* CommonExtensions.swift in Sources */,
 				631F48902A4BFCE200807E30 /* Factory.swift in Sources */,
+				630150102A4DA15C00DC0D94 /* DishDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

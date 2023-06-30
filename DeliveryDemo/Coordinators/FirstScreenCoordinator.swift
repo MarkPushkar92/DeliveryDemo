@@ -28,6 +28,10 @@ class FirstScreenCoordinator: Coordinator {
             let vc = CategoryDetaisController(viewModel: firstScreen.viewModel, titleName: title)
             navigation.pushViewController(vc, animated: true)
         }
+        firstScreen.viewModel.showDish =  { [self] dish in
+            let vc = DishDetailsVC(viewModel: firstScreen.viewModel, dish: dish)
+            navigation.present(vc, animated: true)
+        }
     }
     
    

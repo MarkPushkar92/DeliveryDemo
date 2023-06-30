@@ -15,6 +15,8 @@ protocol FirstScreenOutput {
     func getCategoryDetails(closure: @escaping() -> ())
     
     var onTapShowNextModule: (String) -> Void { get }
+    
+    var showDishDetailedInfo: (DishModel) -> Void { get }
    
 }
 
@@ -64,10 +66,16 @@ final class FirtsScreenViewModel: FirstScreenOutput {
     
     // интерфейс для отправки данных в координатор
     var onShowNext: ((String) -> Void)?
+    
+    var showDish: ((DishModel) -> Void)?
 
     // интерфейс для приема данных от ViewController
     lazy var onTapShowNextModule: (String) -> Void = {  [weak self] name in
         self?.onShowNext?(name)
+    }
+    
+    lazy var showDishDetailedInfo: (DishModel) -> Void = { [weak self] dish in
+        self?.showDish?(dish)
     }
  
 }

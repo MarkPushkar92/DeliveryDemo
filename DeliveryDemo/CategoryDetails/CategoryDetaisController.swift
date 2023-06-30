@@ -46,6 +46,9 @@ class CategoryDetaisController: UIViewController {
 //                self.categoryDetailsView.menuView.menu = menu
             }
         }
+        self.categoryDetailsView.menuView.onTap = self.viewModel.showDishDetailedInfo
+           
+            
     }
         
     init(viewModel: FirtsScreenViewModel, titleName: String) {

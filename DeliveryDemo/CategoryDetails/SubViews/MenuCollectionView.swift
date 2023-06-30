@@ -10,6 +10,8 @@ import UIKit
 
 class MenuCollectionView: UIView {
     
+    var onTap: ((DishModel) -> Void)?
+
     var menu = [DishModel]() {
         didSet {
             collectionView.reloadData()
@@ -75,7 +77,10 @@ extension MenuCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        guard let onTap = onTap else { return }
+        let cell = collectionView.cellForItem(at: indexPath) as? MenuCell
+        guard let dish = cell?.model else { return }
+        onTap(dish)
     }
     
   
