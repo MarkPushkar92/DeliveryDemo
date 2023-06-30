@@ -17,6 +17,8 @@ protocol FirstScreenOutput {
     var onTapShowNextModule: (String) -> Void { get }
     
     var showDishDetailedInfo: (DishModel) -> Void { get }
+    
+    func sendToCart(dish: DishModel) -> Void
    
 }
 
@@ -63,6 +65,20 @@ final class FirtsScreenViewModel: FirstScreenOutput {
 
         })
     }
+    
+    func sendToCart(dish: DishModel) -> Void {
+        if CartController.cart.contains(where: {$0.0 == dish}) {
+            print("такое я уже взял")
+            if let index = CartController.cart.firstIndex(where: {$0.0 == dish}) {
+                var item = CartController.cart[index]
+                item.1 += 1
+                CartController.cart[index] = item
+            }
+        } else {
+            CartController.cart.append((dish, 1))
+        }
+    }
+
     
     // интерфейс для отправки данных в координатор
     var onShowNext: ((String) -> Void)?

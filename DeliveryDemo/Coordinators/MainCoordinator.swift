@@ -22,8 +22,9 @@ class MainCoordinator: Coordinator {
         let cart = configureCart()
         let account = configureAccount()
       
-        tabBarController.viewControllers = [first.navigation, search, cart, account ]
+        tabBarController.viewControllers = [first.navigation, search, cart.navigation, account ]
         first.start()
+        cart.start()
         
     }
     
@@ -43,11 +44,12 @@ class MainCoordinator: Coordinator {
         return navigation
     }
     
-    private func configureCart()  -> UINavigationController {
+    private func configureCart()  -> CartCoordinator {
         let navigation = UINavigationController()
         let image = UIImage.init(named: "cart")
+        let coordinator = CartCoordinator(navigation: navigation, factory: factory)
         navigation.tabBarItem = UITabBarItem(title: "Корзина", image: image, tag: 2)
-        return navigation
+        return coordinator
     }
     
     private func configureAccount()  -> UINavigationController {

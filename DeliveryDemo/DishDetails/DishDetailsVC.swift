@@ -49,8 +49,8 @@ class DishDetailsVC: UIViewController {
     }
     
     private func sendToCart(dish: DishModel) {
+        viewModel.sendToCart(dish: dish)
     }
-    
     
 }
 

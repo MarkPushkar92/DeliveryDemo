@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DishModel {
+struct DishModel: Hashable {
     let id: Int?
     let name: String?
     let price, weight: Int?
